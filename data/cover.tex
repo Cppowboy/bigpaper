@@ -8,13 +8,13 @@
   %=====
   % 秘级
   %=====
-  secretlevel={秘密},
-  secretyear={10},
+  secretlevel={公开},
+  secretyear={19},
   %
   %=========
   % 中文信息
   %=========
-  ctitle={基于方面的情感分析及其在新闻驱动的股票预测中的应用},
+  ctitle={基于方面的情感分析及其\\在新闻驱动的股票预测中的应用},
   cdegree={工学硕士},
   cdepartment={计算机科学与技术系},
   cmajor={计算机科学与技术},
@@ -52,7 +52,7 @@
   % 4. 专业型博士
   %    edegree：“填写专业学位英文名称全称”
   %    emajor：不填写此项
-  edegree={Master of Engineering},
+  edegree={Master of Science},
   emajor={Computer Science and Technology},
   eauthor={Pan Yinxu},
   esupervisor={Associate Professor Song Binheng},
@@ -67,18 +67,12 @@
 
 % 定义中英文摘要和关键字
 \begin{cabstract}
-  % 本文主要研究基于方面的情感分析以及其在新闻驱动的股票预测中的应用。基于方面的情感分析旨在提取句子在对某一特定方面或目标的情感极性。之前的研究主要使用LSTM或CNN作为编码器，来提取特征。而transformer结构，利用了多层attention结构，在NLP领域取得了极佳的效果。我们提出了基于transformer的结构的模型，结合多尺度卷积，在公开数据集(Restaurant, Laptop, Twitter)上取得了最佳的效果。同时，我们将基于方面的情感分析应用于股票预测。我们抓取了路透社的股票相关新闻以及雅虎财经的股票历史数据，构建了新闻驱动的股票预测数据集senti-stock。然后，我们提出了结合多尺度卷积和attention机制的模型，并在senti-stock数据集上取得了最佳的效果。
-  股票预测一直是学术界和商业界共同的研究热点之一。新闻事件能够影响交易员的决定，而股票价格的变动会被交易员的决定影响，因此，新闻事件是可以影响股票市场的。
-  之前的研究将文本挖掘的技术应用到股票预测当中，通过向量或结构化实体的方式来表示事件，忽视了新闻文本中的大量细节；同时，之前研究中用到的数据集大多是不公开的。
-  我们不再从新闻文本中提取事件表示，而是直接将新闻文本作为输入，为每支股票创建一个向量化的表示，并将股票预测转化为一个基于方面的情感分析问题，通过预测新闻对某支股票的影响，来预测股票价格的变动。我们构建了一个名为senti-stock的股票预测数据集。它包含约三万个样本，每个样本都是由来自路透社的新闻和来自雅虎财经的股票历史数据构建的。我们提出一个名为MSRA的模型，它包括情感分析模块和股票关系模块。情感分析模块利用多尺度卷积和股票系数，多尺度卷积可以提取不同粒度的句子特征；股票相关系数是通过股票向量计算得到的，反映了股票相关的信息。股票关系模块利用了attention机制，学习股票之间的相关关系。与其他基于方面的情感分析模型相比，我们的模型在senti-stock数据集上取得了最好的效果。短期（天）、中期（周）、长期（月）的股票预测准确率分别达到了69.20\%，62.73\%，68.26\%。
-  
-本文的贡献点主要有：
-  \begin{itemize}
-  	\item 我们利用路透社的金融新闻和雅虎财经的股票历史数据，创建了新闻驱动的股票预测数据集senti-stock；
-  	\item 我们提出了股票向量的概念，并将新闻驱动的股票预测转化为基于方面的情感分析问题；
-  	\item 提出了基于transformer和多尺度卷积的模型，并在多个开放数据集上取得了最佳的实验效果；
-  	\item 提出了MSRA模型（使用attention机制的多股票关系模型，Multi-Stock Relation model using Attention mechanism），并在senti-stock数据集上取得了最佳的效果。
-  \end{itemize}
+股票预测一直是学术界和商业界共同的研究热点之一。新闻事件能够影响交易员的决定，而股票价格的变动会被交易员的决定影响，因此，新闻事件是可以影响股票市场的。
+之前的研究将文本挖掘的技术应用到股票预测当中，通过向量或结构化实体的方式来表示事件，忽视了新闻文本中的大量细节；同时，之前研究中用到的数据集大多是不公开的。
+我们不再从新闻文本中提取事件表示，而是直接将新闻文本作为输入，为每支股票创建一个向量化的表示，并将股票预测转化为一个基于方面的情感分析问题，通过预测新闻对某支股票的影响，来预测股票价格的变动。我们构建了一个名为senti-stock的股票预测数据集。它包含约三万个样本，每个样本都是由来自路透社的新闻和来自雅虎财经的股票历史数据构建的。我们提出一个名为MSRMAM（基于注意力机制的多股票关系模型）的模型，它包括情感分析模块和股票关系模块。情感分析模块利用多尺度卷积和股票系数，多尺度卷积可以提取不同粒度的句子特征；股票相关系数是通过股票向量计算得到的，反映了股票相关的信息。股票关系模块利用了注意力机制，学习股票之间的相关关系。在senti-stock数据集上的实验结果证明了多股票关系模型的有效性。
+
+本文的贡献点主要有：1）利用路透社的金融新闻和雅虎财经的股票历史数据，创建了新闻驱动的股票预测数据集senti-stock；2）提出了基于转换器和多尺度卷积的模型，用于对目标的情感分析；3）提出了股票向量的概念，并将新闻驱动的股票预测转化为基于方面的情感分析问题，提出了MSRMAM模型（基于注意力机制的多股票关系模型，Multi-Stock Relation Model using Attention Mechanism）用于新闻驱动的股票预测。
+
 
 %   关键词是为了文献标引工作、用以表示全文主要内容信息的单词或术语。关键词不超过 5
 %   个，每个关键词中间用分号分隔。（模板作者注：关键词分隔符不用考虑，模板会自动处
@@ -86,20 +80,13 @@
 \end{cabstract}
 
 % 如果习惯关键字跟在摘要文字后面，可以用直接命令来设置，如下：
-\ckeywords{股票预测, 基于方面的情感分析, 多核卷积, Transformer}
+\ckeywords{股票预测, 基于方面的情感分析, 多核卷积, 转换器}
 
 \begin{eabstract}
-  % This paper focus on aspect-based sentiment analysis and its application in news-driven stock prediction. Aspect-based sentiment analysis aims to extract the sentiment polarity of a sentence on an aspect or target. Previous models use LSTM or CNN to extract sentence features. Transformer which is based on multi-layer self-attention, achieves great performance in many natural language processing tasks. We propose a model based on transformer and multi-scale CNN, which gets the best performance on many benchmarks (Restaurant, Laptop and Twitter). We also regard news-driven stock prediction as an aspect-based sentiment analysis problem. We create a dataset named senti-stock, using financial news from Reuters and stock history data from Yahoo Finance. We propose a model based on multi-scale CNN and attention mechanism, and gets the best performance on senti-stock dataset.
-  The stock market prediction has always been the hotspot research in academia and business. As news events affect human decisions and the volatility of stock prices is influenced by human trading, it is reasonable to say that news events can influence the stock market. Previous studies have applied text mining techniques to predict stock prices by using structured entities or dense vectors to represent news events. And most datasets used in previous studies are not publicly available. We take the news text as input, create an embedding vector for each stock, and regard news-driven stock prediction as an aspect-based sentiment analysis problem. We try to predict stock prices by evaluating the impact of news on stocks. We create a stock prediction dataset named senti-stock. The dataset consists of 30 thousand samples, which is made up of online financial news (from Reuters) and stock history price (from Yahoo Finance). We propose a model named MSRA (Multi-Stock Relation model using Attention mechanism), which consists of sentiment analysis module and stock relation module. The sentiment analysis module is based on multi-scale convolution neural network with stock coefficient. The multi-scale CNN can extract sentence features in different granularities. The stock coefficient, which is computed using the stock embedding is used to adjust the sentence features. The stock relation module uses attention mechanism to learn the relations between stocks. Compared with other aspect-based sentiment analysis models, our model gets the best performance on the senti-stock dataset. The accuracy of short-term (day), middle-term (week) and long-term (month) stock prediction is 69.20\%, 62.73\%, and 68.26\%, respectively.
+  The stock market prediction has always been the hotspot research in academia and business. As news events affect human decisions and the volatility of stock prices is influenced by human trading, it is reasonable to say that news events can influence the stock market. Previous studies have applied text mining techniques to predict stock prices by using structured entities or dense vectors to represent news events. And most datasets used in previous studies are not publicly available. We take the news text as input, create an embedding vector for each stock, and regard news-driven stock prediction as an aspect-based sentiment analysis problem. We try to predict stock prices by evaluating the impact of news on stocks. We create a stock prediction dataset named senti-stock. The dataset consists of 30 thousand samples, which is made up of online financial news (from Reuters) and stock history price (from Yahoo Finance). We propose a model named MSRMAM (Multi-Stock Relation Model using Attention Mechanism), which consists of sentiment analysis module and stock relation module. The sentiment analysis module is based on multi-scale convolution neural network with stock coefficient. The multi-scale CNN can extract sentence features in different granularities. The stock coefficient, which is computed using the stock embedding is used to adjust the sentence features. The stock relation module uses attention mechanism to learn the relations between stocks. Experiments on the senti-stock dataset demonstrate the effectiveness of our model.
   
-  The main contributions of this paper are:
-  \begin{itemize}
-  	\item
-  	We create a dataset named senti-stock using Reuters news and Yahoo Finance history data;
-  	\item We convert news-driven stock prediction to an aspect-based sentiment analysis problem by creating a vecotor for each stockd;
-  	\item We propose a model using transformer and multi-scale CNN and get the best performance on Restaurant, Laptop and Twitter dataset;
-  	\item We propose MSRA (Multi-Stock Relation model using Attention mechanism) and get the best performance on senti-stock dataset.
-  \end{itemize}
+ 
+  The main contributions of this paper are:1)create a dataset named senti-stock using Reuters news and Yahoo Finance history data;2) propose a model using transformer and multi-scale CNN;3)  convert news-driven stock prediction to an aspect-based sentiment analysis problem by creating a vector for each stock and propose MSRMAM (Multi-Stock Relation Model using Attention Mechanism).
 \end{eabstract}
 
 \ekeywords{Stock Prediction, Aspect-based Sentiment Analysis, Multi-scale CNN, Transformer}

@@ -3,12 +3,13 @@
 
 股票预测一直是股票投资所关注的一个重点，成功的预测可以为投资者创造巨大的收益。通过人工智能的方法，对股票涨跌进行预测，成为了计算机与金融的交叉领域的研究热点之一。在本章中，我们将介绍股票市场相关知识、新闻事件驱动的股票市场预测和基于方面的情感分析的相关工作。
 \section{股票市场相关知识}
-股票能否被预测一直是一个值得讨论的话题，在这些讨论中，有效市场假说是非常重要的一个理论。有效市场假说（Efficient Market Hypothesis，简称EMH）是由尤金法玛于1970年整理提出的\cite{fama1970efficient}。这一研究起源于路易斯巴舍利，他使用随机过程的方法，研究股票价格变化的随机性和布郎运动，他认为，过去、现在和未来的事件都 反映在股票市场的价格当中，股价遵循公平游戏模型。尤金法玛总结了前人的理论和实证，提出了有效市场假说，包括以下三个要点。
+股票能否被预测一直是一个值得讨论的话题，在这些讨论中，有效市场假说是非常重要的一个理论。有效市场假说（Efficient Market Hypothesis，简称EMH）是由尤金法玛于1970年整理提出的\cite{fama1970efficient}。这一研究起源于路易斯巴舍利，他使用随机过程的方法，研究股票价格变化的随机性和布朗运动，他认为，过去、现在和未来的事件都 反映在股票市场的价格当中，股价遵循公平游戏模型。尤金法玛总结了前人的理论和实证，提出了有效市场假说，包括以下三个要点。
 \begin{itemize}
     \item 市场中每个人都是理性的，市场中每支股票都处于这些理性人的监视之下，他们每天对股票价格进行分析和预测，并谨慎地在风险与收益之间进行取舍；
     \item 股票价格反映了这些理性人的供求平衡，买方等于卖方；
     \item 股票的价格反映了全部的可获取信息，当有新的消息出现时，股票价格会迅速地调整到合理的价位。
 \end{itemize}
+
 有效市场假说意味着“天下没有免费的午餐”，人们无法在有效市场中获得超额收益。然后有效市场假说也不一定完全正确，不是每个交易者都是完全的理性人，信息也并不一定在每个时刻都发生效果。有效市场假说被越来越多地证明不符合现实。
 
 有效市场假说面临许多理论挑战：
@@ -17,6 +18,7 @@
 	\item 投资者不仅偶然偏离理性，而是经常以同样的方式偏离理性；
 	\item 套利者不会完全消除非理性投资者的错误对价格的影响。
 \end{itemize}
+
 随着人工智能技术的发展，之前的研究表明，股票价格在某种程度上是可以被预测的。
 \begin{figure}[ht]
 	\centering 
@@ -24,7 +26,7 @@
 	\caption{苹果公司和谷歌公司相关新闻两则}
 	\label{fig:stock-event}
 \end{figure}
-如图\ref{fig:stock-event}显示了两条金融新闻。在苹果前CEO乔布斯去世后，苹果的股票价格开始下跌；同时，在谷歌的收入报告公布后，由于收入不理想，谷歌的价格开始下跌。从中可以看出，新闻事件对股票市场有着重要的影响。
+图\ref{fig:stock-event}显示了两条金融新闻。在苹果前首席执行总裁乔布斯去世后，苹果的股票价格开始下跌；同时，在谷歌的收入报告公布后，由于收入不理想，谷歌的价格开始下跌。从中可以看出，新闻事件对股票市场有着重要的影响。
 %另一方面，分型市场假说（Fractal Market Hypothesis，简称FMH），建立在非线性动力系统之上，利用流动性和投资起点很好地解释了有效市场假说无法理解的市场现象。分形市场假说主要内容包括：
 %\begin{itemize}
 %    \item 市场中有许多水平不同的投资者，投资者水平不同会对其行为产生重大影响；
@@ -54,20 +56,20 @@
 股票市场能否被预测一直都是一个值得讨论的问题。大量经验性的研究表明，股价是可以被预测的~\cite{bollen2011twitter,ding2014using,ding2015deep,ding2016knowledge-driven}。新闻事件能够影响交易员的决定，而交易员的交易会影响股票的价格。因此，新闻事件可以影响股票价格的变动。
 
 \subsection{推特情绪预测指数涨跌}
-依照行为金融学的观点，情绪可以影响个体的行为和决定。为验证这一规律是否能扩展到大规模群体上，研究者研究了大规模的推特情绪状态与道琼指数（Dow Jones Industrial Average, DJIA）的相关性~\cite{bollen2011twitter}。他们使用两种情绪分析工具来分析每天推特的文本内容：OpinionFinder~\cite{Wilson2005OpinionFinder}和GPOMS（Google-Profile of Mood States）~\cite{Spielberger1972Profile}。
+依照行为金融学的观点，情绪可以影响个体的行为和决定。为验证这一规律是否能扩展到大规模群体上，研究者研究了大规模的推特情绪状态与道琼指数（Dow Jones Industrial Average, DJIA）的相关性~\cite{bollen2011twitter}。他们使用两种情绪\footnote{这里的情绪指的是emotion，即高兴、悲伤等情绪。}分析工具来分析每天推特的文本内容：OpinionFinder~\cite{Wilson2005OpinionFinder}和GPOMS（Google-Profile of Mood States）~\cite{Spielberger1972Profile}。
 
 \subsubsection{OpinionFinder}
-OpinionFinder是一个公开的软件工具\footnote{http://mpqa.cs.pitt.edu/opinionfinder/opinionfinder\_2/}，用于提取句子级的主观情绪极性（积极或消极）。
+OpinionFinder是一个公开的软件工具\footnote{http://mpqa.cs.pitt.edu/opinionfinder/opinionfinder\_2/}，用于提取句子级的主观情感极性（积极或消极）。
 
 预处理阶段，利用Standford提供的词性标注工具，对输入进行句子分割和词性标注；然后从中选取主观的能反应情绪的词语；然后基于朴素贝叶斯方法和情感词库，对文本进行分类。
 
 \subsubsection{GPOMS}
 
-GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile of Mood States（POMS-bi），一个由严格审查的心理学仪器提供的词库。为了使这一词库可以应用于推特情绪的分析，作者对词库进行了扩充。推特内容的情感被细分为了六类，包括冷静（Calm），警惕（ Alert），肯定（ Sure），重要（ Vital），和善（ Kind）和高兴（Happy）。
+GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile of Mood States（POMS-bi），一个由严格审查的心理学仪器提供的词库。为了使这一词库可以应用于推特情绪的分析，作者对词库进行了扩充。推特内容的情绪被细分为了六类，包括冷静（Calm），警惕（ Alert），肯定（ Sure），重要（ Vital），和善（ Kind）和高兴（Happy）。
 
-利用上述两种工具，他们将推特情感分为六类，包括冷静（Calm），警惕（ Alert），肯定（ Sure），重要（ Vital），和善（ Kind）和高兴（Happy）。然后，他们利用格兰杰因果分析（Granger Causality Analysis）和自组织模糊神经网络（Self-Organizing Fuzzy Neural Network），来验证利用上述两种工具得到的情感时间序列是可以用来预测道琼指数的收盘价。他们预测道琼指数收盘价的涨跌的准确率达到了87.6\%。
+利用上述两种工具，他们将推特情绪分为六类，包括冷静（Calm），警惕（ Alert），肯定（ Sure），重要（ Vital），和善（ Kind）和高兴（Happy）。然后，他们利用格兰杰因果分析（Granger Causality Analysis）和自组织模糊神经网络（Self-Organizing Fuzzy Neural Network），来验证利用上述两种工具得到的情绪时间序列是可以用来预测道琼指数的收盘价。他们预测道琼指数收盘价的涨跌的准确率达到了87.6\%。
 
-这一研究表明，网络信息的情感极性是可以用来预测股票市场的变动的。
+这一研究表明，网络信息的情感或情绪是可以用来预测股票市场的变动的。
 
 \subsection{结构化的事件表示}
 
@@ -81,6 +83,8 @@ GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile o
 
 % 在信息检索中，词袋模型（Bag of Words Model）假定对于一个文本，忽略其词序和语法，句法，将其仅仅看做是一个词集合，或者说是词的一个组合，文本中每个词的出现都是独立的，不依赖于其他词是否出现，或者说当这篇文章的作者在任意一个位置选择一个词汇都不受前面句子的影响而独立选择的。
 在这里，使用经典的TFIDF（Term Frequency–Inverse Document Frequency，词频与逆向文档频率）值作为词袋特征。TFIDF被用来评估某一字词对于一个文件集或一个语料库的重要程度。字词的重要性随着它在文件中出现的次数成正比增加，但同时会随着它在语料库中出现的频率成反比下降。
+
+设$L$是词典的大小，$freq(t_l)$表示第$l$个单词在文档$d$中的出现频率。$TF_l=\frac{1}{|d|}freq(t_l),\forall l\in [1, L]$，其中$|d|$表示文档$d$中单词的数量。$TFIDF_l=\frac{1}{|d|}freq(t_l)log(\frac{N}{|d:freq(t_l)>0|})$，其中$N$是文档的数量。则特征向量可以这样表示$\Phi=(\phi_1,\phi_2...\phi_M)=(TFIDF_1,TFIDF_2...TFIDF_M)$。
 
 \subsubsection{结构化事件表示}
 
@@ -107,7 +111,7 @@ GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile o
 
 \begin{figure}[ht]
     \centering 
-    \includegraphics[width=0.5\linewidth]{CNN.png}
+    \includegraphics[width=0.6\linewidth]{CNN.png}
     \caption{基于CNN的预测模型结构}
     \label{fig:cnn}
 \end{figure}
@@ -120,7 +124,7 @@ GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile o
 
 基于方面的情感分析旨在提取某个句子对某一方面或目标的情感极性~\cite{pontiki2014semeval-2014}。比如，“这家餐厅的菜很好吃，但服务太差了”对“食物”方面的情感是积极的，对“服务”方面的情感是消极的。基于方面的情感分析又细分为对某一方面的情感分析和对某一目标的情感分析。对某一方面的情感分析（Aspect-Category Sentiment Analysis）中，方面可能是一个抽象的概念，并不一定在句子当中出现；而对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）中，目标一定是句子中的某一个词。随着自然语言处理技术的发展，研究者们提出了许多深度学习的模型来解决这一问题。
 
-\subsection{ATAE-LSTM}
+\subsection{基于注意力机制的使用方面向量的长短时记忆网络模型}
 
 \begin{figure}[ht]
     \centering 
@@ -129,9 +133,9 @@ GPOMS是原作者自己提出的一款情感分析工具，它使用了Profile o
     \label{fig:atae-lstm}
 \end{figure}
 
-ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attention-based}是一个结合了LSTM\cite{hochreiter1997long}和attention机制的模型。与直接使用LSTM模型相比，图~\ref{fig:atae-lstm}显示了ATAE-LSTM模型的结构。ATAE-LSTM使用了attention机制，当输入不同的aspect（方面）时，会对句子的不同部分有不同的侧重。因为aspect（方面）起着非常关键的作用，ATAE-LSTM模型用两种方式使用了aspect的信息：一个是在计算attention的加权和时，把aspect的信息和句子的隐式信息表示拼接起来；另一个是把aspect表示和输入单词向量拼接起来。ATAE-LSTM模型既可以处理对某一方面的情感分析（Aspect-Category Sentiment Analysis），也可以处理对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）。ATAE-LSTM相比于LSTM模型，考虑了aspect的信息，引入了attention的机制。
+基于注意力机制的使用方面向量的长短时记忆网络模型（ATAE-LSTM，Attention-based LSTM with Aspect Embedding）~\cite{wang2016attention-based}是一个结合了长短时记忆网络（LSTM）\cite{hochreiter1997long}和注意力机制的模型。与直接使用长短时记忆网络模型相比，图\ref{fig:atae-lstm}显示了ATAE-LSTM模型的结构。ATAE-LSTM使用了注意力机制，当输入不同的方面（aspect）时，会对句子的不同部分有不同的侧重。因为aspect（方面）起着非常关键的作用，ATAE-LSTM模型用两种方式使用了aspect的信息：一个是在计算attention的加权和时，把aspect的信息和句子的隐式信息表示拼接起来；另一个是把aspect表示和输入单词向量拼接起来。ATAE-LSTM模型既可以处理对某一方面的情感分析（Aspect-Category Sentiment Analysis），也可以处理对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）。ATAE-LSTM相比于长短时记忆网络模型，考虑了方面的信息，引入了注意力机制。
 
-\subsection{IAN}
+\subsection{交互式注意力网络模型}
 
 \begin{figure}[ht]
     \centering
@@ -140,11 +144,11 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
     \label{fig:ian}
 \end{figure}
 
-在对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）中，目标（target）可能由多个词组成。在针对不同的句子时，目标中的单词也可能发挥着不同的重要性。因此，IAN（Interactive Attention Networks）~\cite{ma2017interactive}提出目标的表示和句子的表示都需要通过交互式地学习得到。图~\ref{fig:ian}显示了IAN模型的结构。
+在对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）中，目标（target）可能由多个词组成。在针对不同的句子时，目标中的单词也可能发挥着不同的重要性。因此，交互式注意力网络（IAN，Interactive Attention Networks）~\cite{ma2017interactive}提出目标的表示和句子的表示都需要通过交互式地学习得到。图~\ref{fig:ian}显示了IAN模型的结构。
 
-首先，IAN使用LSTM处理句子和目标，得到了句子和目标的隐式向量表示。然后，通过均值pooling的方式，得到句子和目标的表示，并以此计算attention的权重，对句子和目标中的隐式表示进行加权求和。最后，将句子和目标的加权和结果拼接，作为整个输入的表示。IAN相比于ATAE-LSTM，使用了交互式的attention机制，同样考虑了目标中不同单词的不同重要性。
+首先，IAN使用LSTM处理句子和目标，得到了句子和目标的隐式向量表示。然后，通过均值池化的方式，得到句子和目标的表示，并以此计算注意力机制的权重，对句子和目标中的隐式表示进行加权求和。最后，将句子和目标的加权和结果拼接，作为整个输入的表示。IAN相比于ATAE-LSTM，使用了交互式的注意力机制，同样考虑了目标中不同单词的不同重要性。
 
-\subsection{BILSTM-ATT-G}
+\subsection{使用注意控制门的双向长短时记忆网络模型}
 
 \begin{figure}[ht]
     \centering 
@@ -153,9 +157,9 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
     \label{fig:bilstm-att-g}
 \end{figure}
 
-在处理对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）时，BILSTM-ATT-G（BiLSTM with Attentional Gates）~\cite{liu2017attention}除了考虑不同单词的重要性，还考虑了句子不同部分的重要性。图~\ref{fig:bilstm-att-g}显示了BILSTM-ATT-G的结构。它用目标将句子分成了左边、右边和目标三部分。首先，它使用与上面提到的简单attention模型来处理句子的左边部分、右边部分和目标；然后，利用attention模型的输出和最后一个隐层表示来计算一个门，并通过这个门对不同的部分的结果加权求和。这一方法对模型的效果有巨大的提升。从中可以看出，句子中不同的部分有着不同的重要性，gate方法可以很好地学习到这种重要性。
+在处理对某一目标的情感分析（Aspect-Term Sentiment Analysis or Target-oriented Sentiment Analysis）时，使用注意控制门的双向长短时记忆网络（BILSTM-ATT-G，BiLSTM with Attentional Gates）~\cite{liu2017attention}除了考虑不同单词的重要性，还考虑了句子不同部分的重要性。图~\ref{fig:bilstm-att-g}显示了BILSTM-ATT-G的结构。它用目标将句子分成了左边、右边和目标三部分。首先，它使用与上面提到的简单attention模型来处理句子的左边部分、右边部分和目标；然后，利用attention模型的输出和最后一个隐层表示来计算一个门，并通过这个门对不同的部分的结果加权求和。这一方法对模型的效果有巨大的提升。从中可以看出，句子中不同的部分有着不同的重要性，控制门可以很好地学习到这种重要性。
 
-\subsection{GCAE}
+\subsection{结合方面向量的门控卷积网络模型}
 
 \begin{figure}[ht]
     \centering 
@@ -164,9 +168,9 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
     \label{fig:gcae}
 \end{figure}
 
-在前面所提到的模型中，LSTM等循环结构被用来处理单词的向量，得到句子的隐式表示。由于LSTM难以并行化，且当句子长度较长时训练困难，GCAE（Gated Convolutional Network with Aspect Embedding）开始尝试用CNN\cite{krizhevsky2012imagenet,grefenstette2014convolutional}解决处理句子。图~\ref{fig:gcae}显示了GCAE模型的结构。首先，GCAE用一维卷积处理句子输入，得到了句子的表示；然后对句子的单词和target的单词进行卷积，得到控制门；将二者相乘，得到了输入的表示。为了从不同粒度处理句子的特征，GCAE用到了多尺度的卷积，即使用了多个不同卷积核大小的卷积，并将它们的结果拼接起来。
+在前面所提到的模型中，长短时记忆网络模型（LSTM）等循环结构被用来处理单词的向量，得到句子的隐式表示。由于LSTM难以并行化，且当句子长度较长时训练困难，结合方面向量的门控卷积网络模型（GCAE，Gated Convolutional Network with Aspect Embedding）开始尝试用CNN\cite{krizhevsky2012imagenet,grefenstette2014convolutional}处理句子。图~\ref{fig:gcae}显示了GCAE模型的结构。首先，GCAE用一维卷积处理句子输入，得到了句子的表示；然后对句子的单词和target的单词进行卷积，得到控制门；将二者相乘，得到了输入的表示。为了从不同粒度处理句子的特征，GCAE用到了多尺度的卷积，即使用了多个不同卷积核大小的卷积，并将它们的结果拼接起来。
 
-\subsection{Memnet}
+\subsection{记忆网络模型}
 
 \begin{figure}[ht]
     \centering 
@@ -175,9 +179,9 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
     \label{fig:memnet}
 \end{figure}
 
-除了attention机制和gate方法，memory network~\cite{Weston2014Memory}也被应用到基于方面的情感分析中来。Memory network是一项机器学习技术，在问答系统中取得了优秀的表现~\cite{Weston2014Memory,Sukhbaatar2015End}。图~\ref{fig:memnet}显示了Memnet模型的结构。Memnet是一个多层结构。首先，它把单词的向量表示当作记忆单元，把目标单词的均值当作初始query；每层是一个attention的结构，上一层的结果作为下一层的query；各层结果之和作为最终的输出。Memnet利用了多层attention结构，它很好地解决了长期依赖的问题。但是，Memnet也存在一些问题：它直接使用单词的表示作为记忆单元，使得难以处理词组的信息；attention方法对单词的顺序不敏感，这样忽视了单词的时序信息。Memnet在处理需要推断、否定和比较的问题时遇到了困难。
+除了注意力机制和控制门方法，记忆网络（memory network）~\cite{Weston2014Memory}也被应用到基于方面的情感分析中来。记忆网络是一项机器学习技术，在问答系统中取得了优秀的表现~\cite{Weston2014Memory,Sukhbaatar2015End}。图~\ref{fig:memnet}显示了记忆网络模型（Memnet）的结构。Memnet是一个多层结构。首先，它把单词的向量表示当作记忆单元，把目标单词的均值当作初始query；每层是一个注意力结构，上一层的结果作为下一层的query；各层结果之和作为最终的输出。Memnet利用了多层注意力结构，它很好地解决了长期依赖的问题。但是，Memnet也存在一些问题：它直接使用单词的表示作为记忆单元，使得难以处理词组的信息；注意力方法对单词的顺序不敏感，这样忽视了单词的时序信息。Memnet在处理需要推断、否定和比较的问题时遇到了困难。
 
-\subsection{RAM}
+\subsection{循环注意力网络模型}
 
 \begin{figure}[ht]
     \centering 
@@ -186,9 +190,9 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
     \label{fig:ram}
 \end{figure}
 
-针对Memnet的一些缺陷，RAM（Recurrent Attention Network）~\cite{Al2017Deep}。图~\ref{fig:ram}显示了RAM模型的结构。为了解决Memnet不善处理词组的问题，它使用双向LSTM来处理句子单词，得到了结合上下文的句子表示，并以此作为记忆单元；为了使模型具备一定的推断、否定和比较的能力，它不再简单地将上一层的输出作为下一层的query，而是利用一个\cite{cho2014learning}单元，得到下一层的query；同时，为了弥补Memnet不带有时序信息的问题，它引入了位置权重，使得与目标更近的单词权重更大。
+针对记忆网络（Memnet）的一些缺陷，有人提出循环注意力网络模型（RAM，Recurrent Attention Network）\cite{Al2017Deep}。图~\ref{fig:ram}显示了RAM模型的结构。为了解决Memnet不善处理词组的问题，它使用双向LSTM来处理句子单词，得到了结合上下文的句子表示，并以此作为记忆单元；为了使模型具备一定的推断、否定和比较的能力，它不再简单地将上一层的输出作为下一层的query，而是利用一个GRU\cite{cho2014learning}单元，得到下一层的query；同时，为了弥补Memnet不带有时序信息的问题，它引入了位置权重，使得与目标更近的单词权重更大。
 
-\subsection{TNet}
+\subsection{转换网络模型}
 
 \begin{figure}[h]
 	\centering%
@@ -207,4 +211,4 @@ ATAE-LSTM（Attention-based LSTM with Aspect Embedding）~\cite{wang2016attentio
 	\label{fig:tnet}
 \end{figure}
 
-TNet（Transformation Network）~\cite{Xin2018Transformation}集成了众多的技术，在多个公开数据集上取得了最佳的结果。图~\ref{fig:tnet}左图显示了TNet模型的结构。首先，它使用双向LSTM处理句子单词，得到结合上下文的表示，并以此作为记忆单元；然后，利用一个多层结构处理记忆单元；最后，利用二维卷积得到最终的句子表示。具体地，在每一层中，使用一个名为CPT（Context-Preserving Transformation）的结构，其结构如图~\ref{fig:tnet}右图所示。在CPT结构中，对每个句子中的单词，使用attention方法求得与句子单词相关的目标表示，将其与上一层的记忆单元通过一个单层映射得到下一层的记忆单元。同时，TNet还使用了更加复杂的位置权重。
+转换网络模型（TNet，Transformation Network）\cite{Xin2018Transformation}集成了众多的技术，在多个公开数据集上取得了优秀的结果。图\ref{fig:tnet}左图显示了TNet模型的结构。首先，它使用双向LSTM处理句子单词，得到结合上下文的表示，并以此作为记忆单元；然后，利用一个多层结构处理记忆单元；最后，利用二维卷积得到最终的句子表示。具体地，在每一层中，使用一个名为CPT（Context-Preserving Transformation）的结构，其结构如图\ref{fig:tnet}右图所示。在CPT结构中，对每个句子中的单词，使用attention方法求得与句子单词相关的目标表示，将其与上一层的记忆单元通过一个单层映射得到下一层的记忆单元。同时，TNet还使用了更加复杂的位置权重。

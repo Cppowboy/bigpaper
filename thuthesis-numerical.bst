@@ -789,7 +789,7 @@ FUNCTION {format.edition}
 FUNCTION {format.sine.loco}
 { is.in.chinese
     { "[出版地不详]" }
-    { "[S.l.]" }
+    { "" }
   if$
 }
 
@@ -799,7 +799,7 @@ FUNCTION {format.address}
 FUNCTION {format.sine.nomine}
 { is.in.chinese
     { "[出版地不详]" }
-    { "[s.n.]" }
+    { "" }
   if$
 }
 
@@ -825,7 +825,7 @@ FUNCTION {format.publisher}
 FUNCTION {format.sine.loco.sine.nomine}
 { is.in.chinese
     { "[出版地不详: 出版者不详]" }
-    { "[S.l.: s.n.]" }
+    { "" }
   if$
 }
 
@@ -833,9 +833,9 @@ FUNCTION {format.address.publisher}
 { address empty$ not
     { address
       format.publisher empty$ not
-        { ": " * format.publisher * }
+        { "" * format.publisher * }
         { url empty$ doi empty$ and
-            { ": " * format.sine.nomine * }
+            { "" * format.sine.nomine * }
             'skip$
           if$
         }
@@ -843,7 +843,7 @@ FUNCTION {format.address.publisher}
     }
     { url empty$ doi empty$ and
         { format.publisher empty$ not
-            { format.sine.loco ": " * format.publisher * }
+            { format.sine.loco "" * format.publisher * }
             { format.sine.loco.sine.nomine }
           if$
         }
